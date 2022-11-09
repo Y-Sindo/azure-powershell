@@ -235,7 +235,7 @@ directive:
           - CapacityMaximum
           - CapacityScaleType
   - where:
-      model-name: WebPubSubCustomCertificate
+      model-name: CustomCertificate
     set:
       format-table:
         properties:
@@ -245,7 +245,7 @@ directive:
           - KeyVaultSecretVersion
           - ProvisioningState
   - where:
-      model-name: WebPubSubCustomDomain
+      model-name: CustomDomain
     set:
       format-table:
         properties:

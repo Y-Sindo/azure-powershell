@@ -327,8 +327,16 @@ directive:
     set:
       parameter-name: Name
       alias: CertificateName
-# Disable Inline on the Baseclass(Model)
+# Disable Inline on the Baseclass(Model).
   - no-inline:
     - EventListenerEndpoint
     - EventListenerFilter
 ```
+
+## Azure Web PubSub custom development guidance
+
+This chapter contains development guidance specific to Azure Web PubSub service.
+
+### Generate error handling customization code
+
+The default error handling logic only prints the message field of the `ErrorResponse`. However, it's usually not enough for our services where we have to combine the `target` and `message` fields to figure out how to fix the error. Therefore, we should run the script "resources\GenerateCustomErrorHandling.ps1" to generate error handling customization code for each cmdlets. If you have written other csharp customization logic, take care because the script overrides the current files.
